@@ -13,4 +13,27 @@ SwiperCore.use([Navigation]);
 
 document.addEventListener('DOMContentLoaded', () => {
 
-})
+});
+
+const swiper = new Swiper('.slider1', {
+    // Optional parameters
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.next_slider1',
+        prevEl: '.prev_slider1',
+    }
+});
+
+const swiper1 = new Swiper('.slider2', {
+    // Optional parameters
+    slidesPerView: 1,
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.next_slider2',
+        prevEl: '.prev_slider2',
+    }
+});
