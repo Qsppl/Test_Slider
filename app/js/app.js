@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const swiper = new Swiper('.slider1', {
     // Optional parameters
     slidesPerView: 'auto',
-    spaceBetween: 30,
+    spaceBetween: 10,
 
     // Navigation arrows
     navigation: {
@@ -30,6 +30,7 @@ const swiper = new Swiper('.slider1', {
 const swiper1 = new Swiper('.slider2', {
     // Optional parameters
     slidesPerView: 1,
+    allowTouchMove: false,
 
     // Navigation arrows
     navigation: {
