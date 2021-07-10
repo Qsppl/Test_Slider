@@ -1,3 +1,4 @@
 node_modules
 app/css/main.min.css
 app/js/app.min.js
+app/images/dist/
