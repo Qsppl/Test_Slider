@@ -1,48 +1,61 @@
 <!--#set var="title" value="Slider" -->
 <!--#include virtual="/parts/header.html" -->
 
-<main class="wrapper">
+<main>
+	<!-- Main Slider -->
 	<section class="slider">
-		<div>
-			<h2>Популярные товары</h2>
-		</div>
-		<section>
-			<!-- Slider main container -->
-			<div class="swiper-container slider1">
-				<!-- Additional required wrapper -->
-				<div class="swiper-wrapper">
-					<!-- Slides -->
-					<div class="swiper-slide">
+		
+		<div class="swiper-container slider1">
+			<div><h1>Популярные товары</h1></div>
+			<div class="swiper-wrapper cards">
+
+				<!-- Cards -->
+				<div class="swiper-slide card">
+
+					<!-- Pictures Slider -->
+					<section class="images-wrapper">
 						<div class="swiper-container slider2">
-							<!-- Additional required wrapper -->
-							<div class="swiper-wrapper">
+							<div class="swiper-wrapper images">
+
 								<!-- Slides -->
-								<div class="swiper-slide">
-									Slide 1
-								</div>
-								<div class="swiper-slide">Slide 2</div>
-								<div class="swiper-slide">Slide 3</div>
+								<div class="swiper-slide"><img src="images/dist/pic0.jpg" alt="модель"></div>
+								<div class="swiper-slide"><img src="images/dist/pic1.jpg" alt="модель"></div>
+								<div class="swiper-slide"><img src="images/dist/pic2.jpg" alt="модель"></div>
 							</div>
-							<!-- If we need navigation buttons -->
+
+							<!-- navigation buttons -->
 							<div class="swiper-button-prev prev_slider2"></div>
 							<div class="swiper-button-next next_slider2"></div>
 						</div>
-					</div>
-					<div class="swiper-slide">Slide 2</div>
-					<div class="swiper-slide">Slide 3</div>
-					<div class="swiper-slide">Slide 2</div>
-					<div class="swiper-slide">Slide 3</div>
-					<div class="swiper-slide">Slide 2</div>
-					<div class="swiper-slide">Slide 3</div>
-					<div class="swiper-slide">Slide 2</div>
-					<div class="swiper-slide">Slide 3</div>
+
+						<!-- Tags -->
+						<div class="card-tags">
+							<span class="card-tag-new">NEW</span>
+							<span class="card-tag-discount">-30%</span>
+						</div>
+					</section>
+
+					<!-- Description -->
+					<section class="card-description">
+						<div class="main-description">
+							<span>Плащ утепленный</span>
+							<span class="boldText"><span style="text-decoration:line-through">18 900</span><span style="color: #e83841;">13200</span></span>
+						</div>
+						<div class="minor-description">
+							<span>В кредит или рассрочку <span class="boldText">от 742 руб/мес.</span> </span>
+							<span>Размеры: 46, 48, 50, 52</span>
+						</div>
+						<div class="see-more"><span class="minorTextAccent">Подробнее</span></div>
+					</section>
 				</div>
-				<!-- If we need navigation buttons -->
-				<div class="swiper-button-prev prev_slider1"></div>
-				<div class="swiper-button-next next_slider1"></div>
+
 			</div>
-		</section>
+			<!-- navigation buttons -->
+			<div class="swiper-button-prev prev_slider1"></div>
+			<div class="swiper-button-next next_slider1"></div>
+		</div>
 	</section>
+
 </main>
 
 <!--#include virtual="/parts/footer.html" -->

@@ -1,15 +1,85 @@
 // GENERAL PROJECT STYLES
-
-.wrapper
+main
     max-width: 1770px
     margin-left: auto
     margin-right: auto 
 
-.swiper-slide
-    width: 346px
-    height: 500px
-    background-color: #000
 
-.swiper-container
+//  CARD SLIDER  //
+.slider > .swiper-container
+        overflow: visible
+
+.cards
+    margin-top: 40px
+
+//  CARD //
+.card
+    width: 346px
+    height: 650px
+
+    //растягиваем card-description на всю доступную высоту родителя.
+.card
+    display: flex
+    flex-direction: column
+.card-description
+    flex: 1
+
+// CARD IMAGE SLIDER //
+.images > div
+    width: 346px
+    height: 475px
+    background-color: #cccccc
+
+.images > div > img 
+    height: 100%
     width: auto
-    height: 500px
+//  CARD DESCRIPTION //
+.main-description > span > span
+    margin-right: 0.6em
+.card-description > div > span
+    display: block
+
+.card-description
+    padding-top: 10px 10px
+
+//.minor-description_conditions > span
+
+
+.see-more span
+    text-align: center
+
+.card-description
+    display: flex
+    flex-direction: column
+.main-description
+    flex: 1
+.minor-description
+    flex: 1
+
+//  TAGS //
+.card-tags
+    font-size: 9px
+    font-weight: bold
+
+
+.card-tags > span
+    margin-right: 0.5em
+    padding: 5px 10px
+    border-radius: 2px
+    color: white
+    letter-spacing: 1px
+
+.card-tag-new
+    background-color: #53902c
+
+.card-tag-discount
+    background-color: $second-accent
+    font-size: 10px
+    padding: 4.4px 8.5px
+
+.card-tags
+    position: absolute // ACHTUNG comrade, do not delete the property it will break the layout
+    margin: -16px 0 0 0px
+    z-index: 1
+.card-tags > div
+    display: inline-block
