@@ -16,25 +16,25 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const swiper = new Swiper('.slider1', {
-    // Optional parameters
-    slidesPerView: 'auto',
-    spaceBetween: 10,
+  // Optional parameters
+  slidesPerView: 'auto',
+  spaceBetween: 10,
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.next_slider1',
-        prevEl: '.prev_slider1',
-    }
+  // Navigation arrows
+  navigation: {
+    nextEl: '.next_slider1',
+    prevEl: '.prev_slider1',
+  }
 });
 
 const swiper1 = new Swiper('.slider2', {
-    // Optional parameters
-    slidesPerView: 1,
-    allowTouchMove: false,
+  // Optional parameters
+  slidesPerView: 1,
+  allowTouchMove: false,
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.next_slider2',
-        prevEl: '.prev_slider2',
-    }
+  // Navigation arrows
+  navigation: {
+    nextEl: '.next_slider2',
+    prevEl: '.prev_slider2',
+  }
 });

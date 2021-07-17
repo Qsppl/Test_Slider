@@ -8,7 +8,6 @@ $lineheight: 1.7 // Document Line Height
 $userfont: Raleway, sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
-	
 // IMPORT SECTION
 
 // Необходимые
@@ -27,15 +26,14 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font
 
 @import "node_modules/swiper/swiper-bundle"
 
-
 // FONTS LOAD SECTION
 
 @mixin font($fname, $fstyle, $fweight, $furl)
-	@font-face
-		font-family: $fname
-		font-style: $fstyle
-		font-weight: $fweight
-		src: url($furl) format('woff2')
+  @font-face
+    font-family: $fname
+    font-style: $fstyle
+    font-weight: $fweight
+    src: url($furl) format('woff2')
 
 @include font('Raleway', normal, 300, '../fonts/Raleway-Light.woff2')
 @include font('Raleway', italic, 300, '../fonts/Raleway-LightItalic.woff2')
