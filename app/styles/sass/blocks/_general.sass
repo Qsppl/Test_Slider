@@ -41,7 +41,7 @@ main
     flex: 1
 
 //hover эфект расширения карточки 
-@media (hover: none)
+@media (hover: hover)
     .card           // < двигаем z-index'ы чтобы карточка заползала на соседов
         z-index: 0
     .card > section 
@@ -77,6 +77,9 @@ main
     .card:hover > .images-wrapper > div > .swiper-button-prev,
     .card:hover > .images-wrapper > div > .swiper-button-next
         opacity: 1
+    .card:hover > .images-wrapper > div > .swiper-button-next.swiper-button-disabled, 
+    .card:hover > .images-wrapper > div > .swiper-button-prev.swiper-button-disabled
+        opacity: .35!important
 
 // CARD IMAGE SLIDER //
 .images > div
