@@ -8,17 +8,24 @@ $lineheight: 1.7 // Document Line Height
 $userfont: Raleway, sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
-// Bootstrap compatible gutter variable => $gutter
-//$grid-gutter-width: 30px
-//$gutter: $grid-gutter-width
-
+	
 // IMPORT SECTION
 
-@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
-@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
-// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
-// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
-@import '../../../node_modules/swiper/swiper-bundle.css'
+// Необходимые
+@import "node_modules/bootstrap/scss/functions"
+@import "node_modules/bootstrap/scss/variables"
+@import "node_modules/bootstrap/scss/mixins"
+
+// Включите здесь переопределения пользовательских переменных по умолчанию
+@import "_bootstrap-overriding"
+
+// Необязательные
+@import "node_modules/bootstrap/scss/reboot"
+@import "node_modules/bootstrap/scss/type"
+@import "node_modules/bootstrap/scss/images"
+@import "node_modules/bootstrap/scss/grid"
+
+@import "node_modules/swiper/swiper-bundle"
 
 
 // FONTS LOAD SECTION
@@ -38,53 +45,3 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font
 @include font('Raleway', italic, 500, '../fonts/Raleway-MediumItalic.woff2')
 @include font('Raleway', normal, 700, '../fonts/Raleway-Bold.woff2')
 @include font('Raleway', italic, 700, '../fonts/Raleway-BoldItalic.woff2')
-
-// GENERAL DOCUMENT STYLES
-
-::placeholder
-	color: #666
-
-::selection
-	background-color: $accent
-	color: #fff
-
-input, textarea
-	outline: none
-	&:focus:required:invalid
-		border-color: red
-	&:required:valid
-		border-color: green
-
-body
-	font-family: $userfont
-	font-size: $fontsize
-	line-height: $lineheight
-	color: $textcolor
-	min-width: 320px
-	position: relative
-	overflow-x: hidden
-
-h1, h2, h3, h4, h5, h6
-	font-weight: lighter
-	color: #000
-
-main > section
-	margin-top: 20px
-
-.swiper-button-prev::after
-	content: url(/images/keyboard-left-arrow-button.svg)
-	height: auto
-	width: auto
-	font-size: inherit
-.swiper-button-next::after
-	content: url(/images/keyboard-right-arrow-button.svg)
-	height: auto
-	width: auto
-	font-size: inherit
-
-// ATOMIC CSS //
-.boldText
-	font-weight: bold
-
-.minorTextAccent
-	font-weight: 500
