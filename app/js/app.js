@@ -15,26 +15,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-const swiper = new Swiper('.slider1', {
+const swiper = new Swiper('.-js-main-slider', {
   // Optional parameters
   slidesPerView: 'auto',
   spaceBetween: 10,
 
   // Navigation arrows
   navigation: {
-    nextEl: '.next_slider1',
-    prevEl: '.prev_slider1',
+    nextEl: '.-js-main-slider-next',
+    prevEl: '.-js-main-slider-prev',
   }
 });
 
-const swiper1 = new Swiper('.slider2', {
+const swiper1 = new Swiper('.-js-sub-slider', {
   // Optional parameters
   slidesPerView: 1,
   allowTouchMove: false,
 
   // Navigation arrows
   navigation: {
-    nextEl: '.next_slider2',
-    prevEl: '.prev_slider2',
+    nextEl: '.-js-sub-slider-next',
+    prevEl: '.-js-sub-slider-prev',
   }
 });
