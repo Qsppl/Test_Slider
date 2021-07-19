@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
 const swiper = new Swiper('.-js-main-slider', {
   // Optional parameters
   slidesPerView: 'auto',
-  spaceBetween: 10,
 
   // Navigation arrows
   navigation: {

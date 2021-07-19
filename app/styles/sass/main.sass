@@ -19,13 +19,14 @@ input, textarea
     border-color: red
     &:required:valid
       border-color: green
-
+html
+  font-size: $fontsize
+  font-variant: lining-nums
 body
   font-family: $userfont
   font-size: $fontsize
   line-height: $lineheight
   color: $textcolor
-  min-width: 320px
   position: relative
   overflow-x: hidden
 
@@ -33,8 +34,8 @@ h1, h2, h3, h4, h5, h6
   font-weight: lighter
   color: #000
 
-main > section
-  margin-top: 20px
+main 
+  padding-top: 1.5em
 
 .swiper-button-prev::after
   content: url(/images/keyboard-left-arrow-button.svg)
