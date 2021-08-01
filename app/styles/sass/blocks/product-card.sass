@@ -3,9 +3,6 @@
   width: 346px
   display: flex
   flex-direction: column
-.product-card__description
-  height: 27%
-  flex: 1
 
 .page-slider__images-wrapper
   width: 100%
@@ -25,55 +22,68 @@
   z-index: 1
 
 .product-card__description
+  height: 27%
+  font-size: calc(1rem - 1px)
   display: flex
   flex-direction: column
 .product-card__description > *
-  margin: 0.8em
+  padding: 0 0.8em
 
 .product-card__main-description
-  flex: 1
-.product-card__minor-description
-  flex: 1
+  flex-direction: column
+  padding-top: calc(1em + 3px)
 
-.product-card__main-description_line-through
+.product-card__price
+  @extend .boldText
+  font-size: calc(1em + 1px)
+  
+.product-card__price_line-through
   text-decoration: line-through
   font-weight: normal
-.product-card__main-description_red-price
+
+.product-card__price_red-price
   color: #e83841
-  padding-left: 0.6em
+  padding-left: .5em
+
+.product-card__minor-description
+  padding-top: 1em
+  flex: 1
 
 .product-card__see-more
+  font-size: 1rem
+  padding: 0
   text-align: center
+  position: relative
 
 
-//hover эфект 
 @media (hover: hover)
-  .product-card,           // < двигаем z-index'ы чтобы карточка заползала на соседов
-  .product-card > .page-slider__images-wrapper,
-  .product-card > .product-card__description
-    z-index: 0
-  .product-card:hover
-    z-index: 1 
-
-  .product-card::before
+  // static
+  .product-card::before,
+  .product-card__see-more::after
     content: ""
     position: absolute
-    transition-duration: .1s
-    transition-property: top, right, bottom, left, box-shadow
+    display: block
     top: 0
-    right: 0
     bottom: 0
     left: 0
+    right: 0
+    transition-duration: .1s
+
+  .product-card::before
     background-color: #fff
-  .product-card:hover:before
-    top: -0.666em
-    right: -0.666em
-    bottom: -0.666em
-    left: -0.666em
-    box-shadow: -0.214em .214em .785em .333em rgb(12 12 12 / 5%)
-    border: .071em solid #cec9c9
+    transition-property: box-shadow
+
+  .product-card__see-more::after
+    background-color: #f5f6f8
+    z-index: -1
+
+  .product-card
+    z-index: 0
+    .page-slider__images-wrapper,
+    .product-card__description
+      z-index: 0
   
-  .product-card__minor-description, //hover эффект появления элементов карточки
+  .product-card__minor-description,
   .product-card__see-more,
   .product-card .swiper-button-prev, 
   .product-card .swiper-button-next    
@@ -81,12 +91,27 @@
     transition-property: opacity
     transition-duration: .1s
 
-  .product-card:hover .product-card__minor-description,
-  .product-card:hover .product-card__see-more,
-  .product-card:hover .swiper-button-prev,
-  .product-card:hover .swiper-button-next
-    opacity: 1
-  .product-card:hover .swiper-button-next.swiper-button-disabled,
-  .product-card:hover .swiper-button-prev.swiper-button-disabled
-    opacity: .35!important
+  // hover
+  .product-card:hover
+    z-index: 1
+    ::before
+      top: -10px
+      right: -10px
+      bottom: -10px
+      left: -10px
+      box-shadow: -0.214em .214em .785em .333em rgb(12 12 12 / 5%)
+      border: .071em solid #cec9c9
+    .product-card__see-more::after
+      top: -9px
+      right: -9px
+      bottom: -9px
+      left: -9px
+    .product-card__minor-description,
+    .product-card__see-more,
+    .swiper-button-prev,
+    .swiper-button-next
+      opacity: 1
+    .swiper-button-next.swiper-button-disabled,
+    .swiper-button-prev.swiper-button-disabled
+      opacity: .35!important
 
