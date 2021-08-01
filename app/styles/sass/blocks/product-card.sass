@@ -1,65 +1,68 @@
+//  PRODUCT-CARD  //
+  
 .product-card
   height: 650px
   width: 346px
   display: flex
   flex-direction: column
 
-.page-slider__images-wrapper
-  width: 100%
-  height: 73%
-  background-color: #cccccc
-.page-slider__images-wrapper > .swiper-wrapper
-  height: 100%
-  width: 100%
-  img
+  &__images-container
+    width: 100%
+    height: 73%
+    background-color: #cccccc
+
+  &__images-wrapper
     height: 100%
-    width: auto
+    width: 100%
+    img
+      height: 100%
+      width: auto
 
-.product-card .card-tags
-  position: absolute
-  height: 19px
-  margin-top: -13px
-  z-index: 1
+  .card-tags
+    position: absolute
+    height: 19px
+    margin-top: -13px
+    z-index: 1
 
-.product-card__description
-  height: 27%
-  font-size: calc(1rem - 1px)
-  display: flex
-  flex-direction: column
-.product-card__description > *
-  padding: 0 0.8em
+  &__description
+    height: 27%
+    font-size: calc(1rem - 1px)
+    display: flex
+    flex-direction: column
 
-.product-card__main-description
-  flex-direction: column
-  padding-top: calc(1em + 3px)
+  &__description > *
+    padding: 0 .8em
 
-.product-card__price
-  @extend .boldText
-  font-size: calc(1em + 1px)
-  
-.product-card__price_line-through
-  text-decoration: line-through
-  font-weight: normal
+  &__main-description
+    flex-direction: column
+    padding-top: calc(1em + 3px)
 
-.product-card__price_red-price
-  color: #e83841
-  padding-left: .5em
+  &__price
+    @extend .boldText
+    font-size: calc(1em + 1px)
+    &_line-through
+      text-decoration: line-through
+      font-weight: normal
 
-.product-card__minor-description
-  padding-top: 1em
-  flex: 1
+  &__price_red-price
+    color: #e83841
+    padding-left: .5em
 
-.product-card__see-more
-  font-size: 1rem
-  padding: 0
-  text-align: center
-  position: relative
+  &__minor-description
+    padding-top: 1em
+    flex: 1
+
+  &__see-more
+    font-size: 1rem
+    padding: 0
+    text-align: center
+    position: relative
 
 
 @media (hover: hover)
+  
   // static
-  .product-card::before,
-  .product-card__see-more::after
+  .block-underlay
     content: ""
     position: absolute
     display: block
@@ -70,26 +73,32 @@
     transition-duration: .1s
 
   .product-card::before
+    @extend .block-underlay
     background-color: #fff
-    transition-property: box-shadow
+    transition-property: top, right, left, bottom, box-shadow
 
   .product-card__see-more::after
+    @extend .block-underlay
     background-color: #f5f6f8
+    transition-property: top, right, left, bottom
     z-index: -1
 
   .product-card
     z-index: 0
-    .page-slider__images-wrapper,
-    .product-card__description
+
+    &__images-container
+      z-index: 0
+      
+    &__description
       z-index: 0
   
-  .product-card__minor-description,
-  .product-card__see-more,
-  .product-card .swiper-button-prev, 
-  .product-card .swiper-button-next    
-    opacity: 0
-    transition-property: opacity
-    transition-duration: .1s
+    &__minor-description,
+    &__see-more,
+    .swiper-button-prev, 
+    .swiper-button-next    
+      opacity: 0
+      transition-property: opacity
+      transition-duration: .1s
 
   // hover
   .product-card:hover

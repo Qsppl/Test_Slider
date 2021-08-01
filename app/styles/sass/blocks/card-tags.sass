@@ -1,18 +1,20 @@
+//  CARD-TAGS   //
+  
 .card-tags
   font-size: 10px
   display: flex
   font-weight: bold
 
-.card-tags > span
-  @extend .centering-container
-  margin-right: 6px
-  padding: 0 9px
-  border-radius: 3px
-  color: white
-  font-variant: lining-nums
-
-.card-tags__new
-  background-color: #53902c
-
-.card-tags__discount
-  background-color: $second-accent
+  > span
+    @extend .centering-container
+    margin-right: 6px
+    padding: 0 9px
+    border-radius: 3px
+    color: white
+    font-variant: lining-nums
+  
+  &__new
+    background-color: #53902c
+  
+  &__discount
+    background-color: $second-accent
