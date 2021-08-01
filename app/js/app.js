@@ -1,33 +1,17 @@
-// // Import jQuery module (npm i jquery)
-import $ from 'jquery'
-window.jQuery = $
-window.$ = $
+import SwiperCore, { Navigation, Lazy } from 'swiper/core';
+SwiperCore.use([Navigation, Lazy]);
 
-import Swiper from 'swiper'
-import SwiperCore, { Navigation } from 'swiper/core'
-SwiperCore.use([Navigation]);
-
-
-// // Import vendor jQuery plugin example (not module)
-// require('~/app/libs/mmenu/dist/mmenu.js')
-
-document.addEventListener('DOMContentLoaded', () => {
-
-});
-
-const swiper = new Swiper('.-js-main-slider', {
-  // Optional parameters
+const swiper = new SwiperCore('.-js-main-slider', {
   slidesPerView: 'auto',
-
-  // Navigation arrows
   navigation: {
     nextEl: '.-js-main-slider-next',
     prevEl: '.-js-main-slider-prev',
   }
 });
 
-const swiper1 = new Swiper('.-js-sub-slider', {
-  // Optional parameters
+const swiper1 = new SwiperCore('.-js-sub-slider', {
+  preloadImages: false,
+  lazy: true,
   slidesPerView: 1,
   allowTouchMove: false,
 
