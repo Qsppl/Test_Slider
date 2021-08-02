@@ -1,18 +1,8 @@
 // BOOTSTRAP OVERRIDING SECTION //
   
-$grid-breakpoints: ( xxl: 2000px, xl: 1450px, lg: 1220px, md: 960px, sm: 750px, xs: 576px )
-// xs: 576, sm: 750px, md: 960px, lg: 1220px, xl: 1450px, xxl: 1950px (origin)
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1920px )
 
-// верстаю Descop first через max-width
-// lg <<< маленькие ноутбуки и горизонтально-развернутые планшеты
-// md <<< планшеты и горизонтальные телефоны
-// sm <<< скорее всего остаются только горизонтальные телефоны
-// xs <<< вертикальные телефоны
-$container-max-widths: ( sm: 540px, md: 720px, lg: 960px, xl: 92.18%, xxl: 1770px )
-
-$font-size-base: 14px
-
-$rfs-breakpoint: 1920px
+$container-max-widths: ( sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 92.18% )
 
 // HEADINGS
 
@@ -27,6 +17,13 @@ $h6-font-size:                $font-size-base
 
 // CONTAINERS
 
-$container-padding-x: 0
+.container,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm 
+  padding-right: 0 !important
+  padding-left: 0 !important
 
 // CLOSE BOOTSTRAP OVERRIDING SECTION //
