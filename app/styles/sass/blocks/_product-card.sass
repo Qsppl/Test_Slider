@@ -60,6 +60,7 @@
 
   &__see-more
     font-size: calc( 1em + 1px )
+    line-height: 2em
     padding: 0
     text-align: center
     position: relative
@@ -107,15 +108,16 @@
       transition-duration: .1s
 
   // hover
+  // # тут я намеренно не стал сокращать код через &__element
+  .product-card:hover::before
+    top: -10px
+    right: -10px
+    bottom: -10px
+    left: -10px
+    box-shadow: -0.214em .214em .785em .333em rgb(12 12 12 / 5%)
+    border: .071em solid #cec9c9
   .product-card:hover
     z-index: 1
-    ::before
-      top: -10px
-      right: -10px
-      bottom: -10px
-      left: -10px
-      box-shadow: -0.214em .214em .785em .333em rgb(12 12 12 / 5%)
-      border: .071em solid #cec9c9
     .product-card__see-more::after
       top: -9px
       right: -9px

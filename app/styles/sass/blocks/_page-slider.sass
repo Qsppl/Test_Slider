@@ -4,7 +4,7 @@ $productCardWidthBase: 346px
 $productCardHeightBase: 650px
 
 .page-slider
-  max-width: 1770px
+  max-width: 1760px
   margin: auto
   > .swiper-container
     overflow: visible
@@ -14,7 +14,7 @@ $productCardHeightBase: 650px
     margin: 0
 
   &__heading
-    margin-bottom: 2.857rem //40px
+    margin-bottom: 2.55rem //40px
 
   .product-card
     width: $productCardWidthBase
@@ -40,17 +40,12 @@ $productCardHeightBase: 650px
   &__cards-wrapper
     margin: 0
     padding: 0 
-
-@include media-breakpoint-down(sm)
-  //
-
-@include media-breakpoint-down(md)
-  //
-
-@include media-breakpoint-down(lg)
-  .product-card
-    width: rfs-fluid-value(346px)
-    height: rfs-fluid-value(650px)
+@include media-breakpoint-down(xxl)
+  .page-slider
+    max-width: 92.18%
+    .product-card
+      width: calc( $productCardWidthBase * calc( 100vh * 0.00052083333 ) )
+      height: $productCardHeightBase
 
 @include media-breakpoint-down(xl)
   .page-slider
@@ -58,7 +53,17 @@ $productCardHeightBase: 650px
   .product-card
     width: $productCardWidthBase * 0.7
     height: $productCardHeightBase * 0.7
+@include media-breakpoint-down(lg)
+  .product-card
+    width: rfs-fluid-value(346px)
+    height: rfs-fluid-value(650px)
 
-@include media-breakpoint-down(xxl)
-  .page-slider
-    max-width: 92.18%
+@include media-breakpoint-down(md)
+  //
+
+@include media-breakpoint-down(sm)
+  //
+
+
+
+
