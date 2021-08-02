@@ -1,5 +1,8 @@
 //  PAGE-SLIDER   //
 
+$productCardWidthBase: 346px
+$productCardHeightBase: 650px
+
 .page-slider 
   > .swiper-container
     overflow: visible
@@ -33,3 +36,24 @@
   &__cards-wrapper
     margin: 0
     padding: 0 
+
+@include media-breakpoint-down(sm)
+  //
+
+@include media-breakpoint-down(md)
+  //
+
+@include media-breakpoint-down(lg)
+  .product-card
+    width: rfs-fluid-value(346px)
+    height: rfs-fluid-value(650px)
+
+@include media-breakpoint-down(xl)
+  .product-card
+    width: $productCardWidthBase * 0.7
+    height: $productCardHeightBase * 0.7
+
+@include media-breakpoint-down(xxl)
+  .product-card
+    width: $productCardWidthBase
+    height: $productCardHeightBase
