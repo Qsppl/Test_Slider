@@ -1,5 +1,7 @@
 //  PRODUCT-CARD  //
 
+// styles
+
 .product-card
   display: flex
   flex-direction: column
@@ -23,12 +25,6 @@
     img
       height: 100%
       width: auto
-
-  .card-tags
-    position: absolute
-    height: 19px
-    margin-top: -13px
-    z-index: 1
 
   &__description
     height: 27%
@@ -65,6 +61,11 @@
     text-align: center
     position: relative
 
+.card-tags
+  position: absolute
+  z-index: 1
+  height: 19px
+  margin-top: -13px
 
 @media (hover: hover)
   
@@ -131,3 +132,26 @@
     .swiper-button-next.swiper-button-disabled,
     .swiper-button-prev.swiper-button-disabled
       opacity: .35!important
+
+// media
+
+//@include media-breakpoint-down(xxl)
+//  //
+@include media-breakpoint-down(xl)
+  .card-tags
+    height: 13px
+    margin-top: -9px
+    font-size: 7px
+  
+//@include media-breakpoint-down(lg)
+//  //
+
+@include media-breakpoint-down(md)
+  .product-card
+    &__main-description
+      padding-top: 1em
+    &__minor-description
+      padding-top: 0
+
+//@include media-breakpoint-down(sm)
+//  //
