@@ -1,13 +1,16 @@
 //  PAGE-SLIDER   //
 
-$productCardWidthBase: 346px
-$productCardHeightBase: 650px
+// variables
+
+$cards-container_Height: 650px
+$product-card_Width: 346px
+
+// styles
 
 .page-slider
-  max-width: 1760px
-  margin: auto
-  > .swiper-container
+  &__cards-container
     overflow: visible
+    height: $cards-container_Height
 
   &__cards-wrapper
     padding: 0
@@ -16,10 +19,9 @@ $productCardHeightBase: 650px
   &__heading
     margin-bottom: 2.55rem //40px
 
-  .product-card
-    width: $productCardWidthBase
-    height: $productCardHeightBase
-    margin-right: .714em // 10 px
+  &__cards-wrapper
+    margin: 0
+    padding: 0     
 
   > .swiper-button-prev
     top: 0
@@ -37,33 +39,51 @@ $productCardHeightBase: 650px
     width: 37px
     height: 48px
 
-  &__cards-wrapper
-    margin: 0
-    padding: 0 
+.product-card
+  width:  $product-card_Width
+  height: 100%
+  margin-right: 10px
+
+// MEDIA
+
 @include media-breakpoint-down(xxl)
   .page-slider
-    max-width: 92.18%
-    .product-card
-      width: calc( $productCardWidthBase * calc( 100vh * 0.00052083333 ) )
-      height: $productCardHeightBase
+    &__cards-container
+      height: $cards-container_Height
+    
+  .product-card
+    width:  $product-card_Width
 
 @include media-breakpoint-down(xl)
   .page-slider
-    max-width: 92.18%
+    &__cards-container
+      height: $cards-container_Height * 0.7
+    &__heading
+      margin-bottom: 1.8rem
+      font-size: 1.75rem
+      
   .product-card
-    width: $productCardWidthBase * 0.7
-    height: $productCardHeightBase * 0.7
+    font-size: 10px
+    width: $product-card_Width * 0.7
+
 @include media-breakpoint-down(lg)
+  .page-slider
+    &__cards-container
+      height: $cards-container_Height * 0.6
+    &__heading
+      margin-bottom: 1rem
+      font-size: 1.3rem
+      
   .product-card
-    width: rfs-fluid-value(346px)
-    height: rfs-fluid-value(650px)
+    font-size: 10px
+    width: $product-card_Width * 0.6
 
 @include media-breakpoint-down(md)
-  //
-
+  .page-slider
+    &__cards-container
+      height: $cards-container_Height * 0.56
+  .product-card
+    font-size: 10px
+    width: $product-card_Width * 0.56
 @include media-breakpoint-down(sm)
   //
-
-
-
-
