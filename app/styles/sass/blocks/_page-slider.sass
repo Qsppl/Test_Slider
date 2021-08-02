@@ -16,8 +16,27 @@ $product-card_Width: 346px
     padding: 0
     margin: 0
 
-  &__heading
+  &__head
+    display: flex
     margin-bottom: 2.55rem //40px
+    
+  &__heading
+    flex: 1
+    margin-bottom: 0
+
+  &__button
+    position: relative
+    margin: auto 1em
+    padding: .7em
+    height: 0
+    width: 0
+    background-color: #f2f2f2
+    border-radius: 50%
+
+    top: 5px
+    right: unset
+    bottom: unset
+    left: unset
 
   &__cards-wrapper
     margin: 0
@@ -30,6 +49,10 @@ $product-card_Width: 346px
     left: auto
     width: 37px
     height: 48px
+    background-color: #f2f2f2
+    border-radius: 50%
+  > .swiper-button-prev::after
+    z-index: 10
 
   > .swiper-button-next
     top: 0
@@ -38,6 +61,12 @@ $product-card_Width: 346px
     left: auto
     width: 37px
     height: 48px
+  > .swiper-button-next::after
+    background-color: #f2f2f2
+    border-radius: 50%
+
+
+
 
 .product-card
   width:  $product-card_Width
@@ -58,8 +87,9 @@ $product-card_Width: 346px
   .page-slider
     &__cards-container
       height: $cards-container_Height * 0.7
-    &__heading
+    &__head
       margin-bottom: 1.8rem
+    &__heading
       font-size: 1.75rem
       
   .product-card
@@ -70,8 +100,9 @@ $product-card_Width: 346px
   .page-slider
     &__cards-container
       height: $cards-container_Height * 0.6
-    &__heading
+    &__head
       margin-bottom: 1rem
+    &__heading
       font-size: 1.3rem
       
   .product-card
