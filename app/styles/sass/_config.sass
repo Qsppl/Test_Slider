@@ -1,7 +1,7 @@
 // USER VARIABLES SECTION //
 
-$accent: #7caa42 // Accent Color
-$second-accent: #e83841
+$accent: #b6b7bd // Accent Color
+$second-accent: #c9c9c9
 $fontsize: 14px
 $textcolor: #1c1f26 // Text Color
 $lineheight: 1.7 // Document Line Height
@@ -26,6 +26,17 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font
 @import "node_modules/bootstrap/scss/grid"
 
 @import "node_modules/swiper/swiper-bundle"
+
+.swiper-button-prev::after
+  content: url(/images/keyboard-left-arrow-button.svg)
+  height: auto
+  width: auto
+  font-size: inherit
+.swiper-button-next::after
+  content: url(/images/keyboard-right-arrow-button.svg)
+  height: auto
+  width: auto
+  font-size: inherit
 
 // FONTS LOAD SECTION
 
