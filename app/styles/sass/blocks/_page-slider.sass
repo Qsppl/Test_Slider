@@ -3,7 +3,9 @@
 $productCardWidthBase: 346px
 $productCardHeightBase: 650px
 
-.page-slider 
+.page-slider
+  max-width: 1770px
+  margin: auto
   > .swiper-container
     overflow: visible
 
@@ -15,6 +17,8 @@ $productCardHeightBase: 650px
     margin-bottom: 2.857rem //40px
 
   .product-card
+    width: $productCardWidthBase
+    height: $productCardHeightBase
     margin-right: .714em // 10 px
 
   > .swiper-button-prev
@@ -49,11 +53,12 @@ $productCardHeightBase: 650px
     height: rfs-fluid-value(650px)
 
 @include media-breakpoint-down(xl)
+  .page-slider
+    max-width: 92.18%
   .product-card
     width: $productCardWidthBase * 0.7
     height: $productCardHeightBase * 0.7
 
 @include media-breakpoint-down(xxl)
-  .product-card
-    width: $productCardWidthBase
-    height: $productCardHeightBase
+  .page-slider
+    max-width: 92.18%
