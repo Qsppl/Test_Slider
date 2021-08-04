@@ -143,8 +143,12 @@
     margin-top: -9px
     font-size: 7px
   
-//@include media-breakpoint-down(lg)
-//  //
+@include media-breakpoint-down(lg)
+  .product-card
+    &__minor-description
+      padding-top: 0
+    &__see-more
+      line-height: 3em
 
 @include media-breakpoint-down(md)
   .product-card
